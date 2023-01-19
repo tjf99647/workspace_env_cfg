@@ -6,7 +6,6 @@ setenv SynopsysList /home/chehejia/eda
 setenv SNPSLMD_LICENSE_FILE 27020@10.190.4.1
 
 #VCS
-
 setenv DVE_HOME $SynopsysList/vcs/S-2021.09-SP1-1/gui/dve
 setenv VCS_HOME $SynopsysList/vcs/S-2021.09-SP1-1
 setenv PATH $VCS_HOME/bin:$PATH
@@ -81,6 +80,7 @@ alias ..... "cd ../../../../.."
 
 # GIT related
 alias gs    "git status"
+alias gsn   "git status -uno"
 alias gco   "git checkout"
 alias gd    "git difftool"
 alias gdc   "git difftool --cached"
