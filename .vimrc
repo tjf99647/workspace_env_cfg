@@ -29,8 +29,7 @@ set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 set tag=tags;
 set clipboard+=unnamed
 
-
-"Install Vim Plugin bu pathogen
+"Install Plugin via PATHOGEN
 execute pathogen#infect()
 syntax on
 filetype plugin indent on
@@ -38,6 +37,14 @@ filetype plugin indent on
 "call plug#begin('~/.vim/bundle/')
 "Plug 'verilog_systemverilog.vim'
 "call plug#end()
+
+
+"""""""""""""""""""""""""""""""""""""""""""
+" Setting for extensions
+"""""""""""""""""""""""""""""""""""""""""""
+let g:verilog_syntax_fold_lst = ""
+"let g:verilog_syntax_fold_lst = "function,task"
+set foldmethod=syntax
 
 if &t_Co > 2 || has("gui_running")
 set hlsearch
@@ -103,12 +110,14 @@ endfunc "SetTitle
 syntax enable
 set background=dark
 if has("gui_running")
-    colorscheme blackdust "solarized " koehler/desert
+"solarized koehler desert jellybeans kellys leo mirodark oceanblack blackdust monokai neodark
+    colorscheme blackdust
+
     winpos 90 105
     set lines=95 columns=111
     "colo peachpuff
     set autoindent
-    set guifont=Monospace\ 13
+    set guifont=Monospace\ 10
 "    set guifont = Monospace:h10
 else
     colorscheme solarized " I'd like to use
@@ -210,3 +219,15 @@ function! RemoveTrailingWhitespace()
 endfunction
 autocmd BufWritePre * call RemoveTrailingWhitespace()
 " }}}
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Nerd Tree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "left"
+let NERDTreeShowHidden=0
+let NERDTreeIgnore = ['\.pyc$', '__pycache__']
+let g:NERDTreeWinSize=35
+map <F2> :NERDTreeMirror<cr>
+map <F2> :NERDTreeToggle<cr>
+""map <leader>nb :NERDTreeFromBookmark<Space>
+""map <leader>nf :NERDTreeFind<cr>
