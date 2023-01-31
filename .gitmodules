@@ -1,0 +1,12 @@
+[submodule ".vim/bundle/nedtree"]
+	path = .vim/bundle/nedtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule ".vim/bundle/vim-cursorword.git"]
+	path = .vim/bundle/vim-cursorword.git
+	url = git@github.com:itchyny/vim-cursorword.git
+[submodule "vim/bundle/indentLine.git"]
+	path = vim/bundle/indentLine.git
+	url = git@github.com:Yggdroot/indentLine.git
+[submodule ".vim/bundle/indentLine.git"]
+	path = .vim/bundle/indentLine.git
+	url = git@github.com:Yggdroot/indentLine.git

@@ -66,6 +66,12 @@ alias go0="cd /share/tjf_workplace0"
 alias go1="cd /share/tjf_workplace1"
 alias go2="cd /share/tjf_workplace2"
 
+export WORKSPACE=/share/tjf_workplace0
+
+# Ctags related
+alias ctags_uvm="ctags -R --languages=systemverilog -o ~/tags_m/tags_uvm /share/app/eda/vcs/S-2021.09-SP1-1/etc/uvm-1.2"
+alias ctags_uvmf="ctags -R --languages=systemverilog -o ${WORKSPACE}/tags_uvmf $WORKSPACE"
+
 # UVMF
 export UVMF_HOME=~/UVMF_2022.3
 

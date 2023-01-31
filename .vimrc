@@ -9,6 +9,7 @@ set ruler
 set autochdir
 " Use spaces instead of tabs
 set expandtab
+set ignorecase
 
 " Be smart when using tabs
 set smarttab
@@ -21,9 +22,9 @@ set noswapfile
 set nowb
 set nobackup
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set autoindent
 set cinoptions={0,1s,t0,n-2,p2s,(03s,=.5s,>1s,=1s,:1s
 set tag=tags;
@@ -38,13 +39,6 @@ filetype plugin indent on
 "Plug 'verilog_systemverilog.vim'
 "call plug#end()
 
-
-"""""""""""""""""""""""""""""""""""""""""""
-" Setting for extensions
-"""""""""""""""""""""""""""""""""""""""""""
-let g:verilog_syntax_fold_lst = ""
-"let g:verilog_syntax_fold_lst = "function,task"
-set foldmethod=syntax
 
 if &t_Co > 2 || has("gui_running")
 set hlsearch
@@ -120,7 +114,7 @@ if has("gui_running")
     set guifont=Monospace\ 10
 "    set guifont = Monospace:h10
 else
-    colorscheme solarized " I'd like to use
+    colorscheme neodark "solarized
 endif
 
 nmap <2-LeftMouse> <nop>
@@ -217,9 +211,15 @@ function! RemoveTrailingWhitespace()
         call cursor(b:curline, b:curcol)
     endif
 endfunction
-autocmd BufWritePre * call RemoveTrailingWhitespace()
+"autocmd BufWritePre * call RemoveTrailingWhitespace()
+"
 " }}}
 "
+"
+"============================================================="
+" Extensions configuration
+"============================================================="
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Nerd Tree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -231,3 +231,17 @@ map <F2> :NERDTreeMirror<cr>
 map <F2> :NERDTreeToggle<cr>
 ""map <leader>nb :NERDTreeFromBookmark<Space>
 ""map <leader>nf :NERDTreeFind<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CTAGS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tags=~/tags_m/tags_uvm
+set tags+=/$WORKSPACE/tags_uvmf
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => systemverilog
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:verilog_syntax_fold_lst = ""
+"let g:verilog_syntax_fold_lst = "function,task"
+"set foldmethod=syntax
+"

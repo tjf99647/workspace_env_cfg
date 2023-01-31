@@ -85,3 +85,5 @@ alias gco   "git checkout"
 alias gd    "git difftool"
 alias gdc   "git difftool --cached"
 alias gpush "git push origin HEAD:refs/for/master"
+
+# Ctags related
