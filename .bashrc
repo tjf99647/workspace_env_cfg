@@ -59,22 +59,23 @@ alias gco="git checkout"
 alias gd="git difftool"
 alias gdc="git difftool --cached"
 alias gpush="git push origin HEAD:refs/for/master"
+alias gsb="git submodule"
 
 # PROJ related
 alias seda="source /share/eda_env/edabash"
-alias go0="cd /share/tjf_workplace0"
-alias go1="cd /share/tjf_workplace1"
-alias go2="cd /share/tjf_workplace2"
+alias go0="cd /share/tjf_workplace0 ; export WORKSPACE=/share/tjf_workplace0"
+alias go1="cd /share/tjf_workplace1 ; export WORKSPACE=/share/tjf_workplace1"
+alias go2="cd /share/tjf_workplace2 ; export WORKSPACE=/share/tjf_workplace2" 
+alias gop="cd $WORKSPACE/schumacher-ppartl" 
+alias goc="cd $WORKSPACE/schumacher-ppartl/sv_packs/tb/common" 
 
-export WORKSPACE=/share/tjf_workplace0
 
 # Ctags related
 alias ctags_uvm="ctags -R --languages=systemverilog -o ~/tags_m/tags_uvm /share/app/eda/vcs/S-2021.09-SP1-1/etc/uvm-1.2"
 alias ctags_uvmf="ctags -R --languages=systemverilog -o ${WORKSPACE}/tags_uvmf $WORKSPACE"
 
 # UVMF
-export UVMF_HOME=~/UVMF_2022.3
-
+#export UVMF_HOME=~/UVMF_LX
 alias yaml2uvmf="$UVMF_HOME/scripts/yaml2uvmf.py"
 
 # COLOURS! YAAAY!
@@ -90,6 +91,7 @@ export PATH=${PATH}:~/bin:~/.local/bin:~/etc/scripts
 export PATH=${PATH}:/usr/local/go/bin
 export GOPATH=~
 
+export PATH=${PATH}:${WORKSPACE}/schumacher-ppartl/sv_packs/tb/common/scripts
 
 # Change up a variable number of directories
 # E.g:

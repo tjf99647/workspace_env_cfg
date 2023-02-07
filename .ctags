@@ -17,6 +17,7 @@
 --regex-systemverilog=/^\s*\btypedef\b\s+.*\s+(\b\w+\b)\s*;/\1/e,typedefs, typedefs (typedef ...)/
 --regex-systemverilog=/^\s*`define\b\s*(\w+)/`\1/d,defines,defines (define ...)/
 --regex-systemverilog=/}\s*(\b\w+\b)\s*;/\1/e,typedefs,typedefs (typedef ...)/
+--regex-systemverilog=/)\s*(\b\w+_t\b)\s*;/\1/e,typedefs,typedefs (typedef ...)/
 
 --regex-systemverilog=/^\s*`include\s*(.+)\s*/include \1/b,includes,includes (include ...)/
 --regex-systemverilog=/^\s*(`uvm_[_a-zA-Z0-9]+)\(\s*/\1/o,macros,macros (macro ...)/
@@ -27,8 +28,6 @@
 --regex-systemverilog=/^\s*(\b(static|local|private)\b)*\s*(\b(real|shortreal|chandle|string|event)\b)(\s*\[.+\])*\s*(\b\w+\b)/\6/v,variables,variables (variable ...)/
 --regex-systemverilog=/(\b(input|output|inout)\b)?\s*(\[.+\])*\s*(\b(wire|reg|logic)\b)\s*(\[.+\])*\s*(#(\(.+\)|\S+)\))?\s*(\b\w+\b)/\9/v,variables,variables (variable ...)/
 
-# can't support multiple tags in one line, read below
-# http://stackoverflow.com/questions/10741664/ctags-regex-for-multiple-declarations-in-one-line
 --regex-systemverilog=/^\s*(\b\w+\b)+\s*(\b\w+\b)+\s*;/\2/v,variables,variables (variable ...)/
 --regex-systemverilog=/^\s*(\b\w+\b)+\s*(\b\w+\b)+\s*,\s*(\b\w+\b)+\s*;/\3/v,variables,variables (variable ...)/
 --regex-systemverilog=/^\s*(\b\w+\b)+\s*(\b\w+\b)+\s*,\s*(\b\w+\b)+\s*,\s*(\b\w+\b)+\s*;/\4/v,variables,variables (variable ...)/

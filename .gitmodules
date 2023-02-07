@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/indentLine.git"]
 	path = .vim/bundle/indentLine.git
 	url = git@github.com:Yggdroot/indentLine.git
+[submodule "xrun"]
+	path = xrun
+	url = git@github.com:tjf99647/xrun.git
