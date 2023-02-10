@@ -13,3 +13,6 @@
 [submodule "xrun"]
 	path = xrun
 	url = git@github.com:tjf99647/xrun.git
+[submodule "opentitan"]
+	path = opentitan
+	url = git@github.com:tjf99647/opentitan.git
