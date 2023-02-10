@@ -38,7 +38,8 @@ alias grep='grep --color=auto'
 #alias ungron="gron --ungron"
 #alias j="jobs"
 #alias follow="tail -f -n +1"
-alias ff='find . -iname'
+alias ffi='find . -iname'
+alias ff='find . -name'
 alias gg='source ~/.bashrc'
 alias e='/usr/bin/gvim -p'
 alias h='history'
