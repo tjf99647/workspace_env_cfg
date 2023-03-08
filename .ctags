@@ -15,7 +15,7 @@
 --regex-systemverilog=/^\s*\bprogram\b\s*(\b\w+\b)/\1/p,programs,program (program ...)/
 --regex-systemverilog=/^\s*\binterface\b\s*(\b\w+\b)/\1/i,interfaces,interfaces (interface ...)/
 --regex-systemverilog=/^\s*\btypedef\b\s+.*\s+(\b\w+\b)\s*;/\1/e,typedefs, typedefs (typedef ...)/
---regex-systemverilog=/^\s*`define\b\s*(\w+)/`\1/d,defines,defines (define ...)/
+--regex-systemverilog=/^\s*`define\b\s*(\w+)/\1/d,defines,defines (define ...)/
 --regex-systemverilog=/}\s*(\b\w+\b)\s*;/\1/e,typedefs,typedefs (typedef ...)/
 --regex-systemverilog=/)\s*(\b\w+_t\b)\s*;/\1/e,typedefs,typedefs (typedef ...)/
 

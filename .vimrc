@@ -198,6 +198,9 @@ inoremap <M-k> <Up>
 inoremap <M-h> <left>
 inoremap <M-l> <Right>
 
+" Command for aligning different rows
+" .,50s/\(.*\)\s*;/\=printf("%-30s ;", submatch(1))/
+
 " Function {{{
 " Remove trailing whitespace when writing a buffer, but not for diff files.
 " From: Vigil
@@ -237,6 +240,7 @@ map <F2> :NERDTreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set tags=~/tags_m/tags_uvm
 set tags+=/$WORKSPACE/tags_uvmf
+set tags+=/$WORKSPACE/tags_cpp
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => systemverilog

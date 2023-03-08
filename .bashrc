@@ -74,6 +74,7 @@ alias goc="cd $WORKSPACE/schumacher-ppartl/sv_packs/tb/common"
 # Ctags related
 alias ctags_uvm="ctags -R --languages=systemverilog -o ~/tags_m/tags_uvm /share/app/eda/vcs/S-2021.09-SP1-1/etc/uvm-1.2"
 alias ctags_uvmf="ctags -R --languages=systemverilog -o ${WORKSPACE}/tags_uvmf $WORKSPACE"
+alias ctags_cpp="ctags -R --languages=C++ -o ${WORKSPACE}/tags_cpp $WORKSPACE"
 
 # UVMF
 #export UVMF_HOME=~/UVMF_LX
