@@ -1,14 +1,8 @@
-[submodule ".vim/bundle/nedtree"]
-	path = .vim/bundle/nedtree
-	url = https://github.com/preservim/nerdtree.git
 [submodule ".vim/bundle/vim-cursorword.git"]
 	path = .vim/bundle/vim-cursorword.git
 	url = git@github.com:itchyny/vim-cursorword.git
 [submodule "vim/bundle/indentLine.git"]
 	path = vim/bundle/indentLine.git
-	url = git@github.com:Yggdroot/indentLine.git
-[submodule ".vim/bundle/indentLine.git"]
-	path = .vim/bundle/indentLine.git
 	url = git@github.com:Yggdroot/indentLine.git
 [submodule "xrun"]
 	path = xrun
@@ -16,3 +10,9 @@
 [submodule "opentitan"]
 	path = opentitan
 	url = git@github.com:tjf99647/opentitan.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git@github.com:preservim/nerdtree.git
+[submodule ".vim/bundle/verilog_systemverilog.vim"]
+	path = .vim/bundle/verilog_systemverilog.vim
+	url = git@github.com:vhda/verilog_systemverilog.vim.git
