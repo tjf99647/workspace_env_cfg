@@ -77,7 +77,7 @@ set cmdh = "\!"
 alias cd 'chdir \!:*; set prompt="[${cyan}%n${end}@${green}%m${end}]: `pwd`\n${magenta}\%$cmdh${end} "'# ▶
 
 # Clean up after ourselves...
-unset red green yellow blue magenta cyan yellow white end
+#unset red green yellow blue magenta cyan yellow white end
 
 #set prompt="\n%{\033[0;32m%}%n @ %m:%{\033[0;33m%}%~%{\033[1;30m%} [%P]\n%{\033[0;35m%}▶%{\033[0m%} "
 
@@ -164,6 +164,12 @@ alias gd    "git difftool"
 alias gdc   "git difftool --cached"
 alias gpush "git push origin HEAD:refs/for/master"
 alias gsl   "git config --file .gitmodules --name-only --get-regexp path"
-
+alias gsv   "git submodule foreach git remote -v"
+alias gsa   "git submodule add "
 
 # Ctags related
+alias ctags_uvms "ctags -R --languages=systemverilog -o ~/tags_m/tags_uvm /share/app/eda/vcs/S-2021.09-SP1-1/etc/uvm-1.2"
+alias ctags_uvmf "ctags -R --languages=systemverilog -o ${WORKSPACE}/tags_uvmf $WORKSPACE"
+alias ctags_cpp  "ctags -R --languages=C++ -o ${WORKSPACE}/tags_cpp $WORKSPACE"
+
+
