@@ -8,7 +8,7 @@ use warnings;
 use Getopt::Long;
 use Term::ANSIColor;
 
-my $base_path="/share/tjf_workplace0/cad-scripts/interface_gen";
+my $base_path="/share/tjf_workspace/cad-scripts/interface_gen";
 my $rtl_inf_gen="$base_path/src/rtl_inf_gen.py";
 my $dpi_cosim_gen="$base_path/src/dpi_cosim_gen.py";
 my $py_cmpl="python3";
