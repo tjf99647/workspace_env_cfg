@@ -82,8 +82,14 @@ set CurPath=`pwd`
 
 if($CurPath =~ *workspace*db[0-9] ) then
   setenv WORKSPACE `pwd`
-  echo "WORKSPACE: ${WORKSPACE}"
 endif
+if($?WORKSPACE) then
+else
+  setenv WORKSPACE `pwd`
+endif 
+
+echo "WORKSPACE: ${WORKSPACE}"
+
 
 setenv PATH ${WORKSPACE}/schumacher-ppartl/sv_packs/tb/common/scripts:$PATH
 
